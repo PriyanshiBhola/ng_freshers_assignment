@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./assignment1.component.css']
 })
 export class Assignment1Component {
-  value = '';
-  showData(data){
+   values = '';
+    showData(data){
     this.value = data.value;
   }
-
 }
