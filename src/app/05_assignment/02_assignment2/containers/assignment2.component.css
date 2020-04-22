@@ -6,3 +6,15 @@
 .active {
   background-color: #0c5460;
 }
+#tab td, #table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#tab th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(185, 147, 221);
+  color: white;
+
+}
