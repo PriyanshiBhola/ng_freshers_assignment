@@ -1,8 +1,7 @@
 .text-container{
-  width: 468px;
   padding: 25px;
   box-sizing: border-box;
-  border: 5px solid darkmagenta;
+  border: 2px solid darkmagenta;
   
 }
 .your-code {
