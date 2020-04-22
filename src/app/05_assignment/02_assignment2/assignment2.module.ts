@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Assignment2Component } from './containers/assignment2.component';
-
-import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
 
 
 @NgModule({
   imports :[
-    BrowserModule,CommonModule
+   CommonModule
   ],
   declarations: [
     Assignment2Component

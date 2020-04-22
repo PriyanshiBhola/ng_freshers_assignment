@@ -1,27 +1,28 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Todo } from 'src/app/03_pipes/models/todo.interface';
+import { Component,  ViewEncapsulation } from '@angular/core';
+import { AssignmentComponent, Todo } from '../../assignment.component';
 
 @Component({
   selector: 'app-assignment2',
   templateUrl: './assignment2.component.html',
   styleUrls: ['./assignment2.component.css']
 })
-export class Assignment2Component implements OnInit{
-  @Input() todos : Todo;
-  
-  constructor() { }
+export class Assignment2Component {
+  list : Todo[];
+  constructor(private asgcomp : AssignmentComponent) { }
 
-  ngOnInit() {
-    console.log(this.todos);
+
+  createTableData(input : string) : HTMLTableDataCellElement{
+    let cell = document.createElement('td');
+    cell.textContent = input;
+    return cell;
+  }
+  ngOnInit(){
+    
+     this.list = this.asgcomp.todos;
+   
   }
 
-  // setRow(i){
-  //   this.selectedRow = i;
-
-  // }
-    
-    
+  addClass(event){
+    event.target.parentNode.className = "active";
   }
-
-  
-
+}
