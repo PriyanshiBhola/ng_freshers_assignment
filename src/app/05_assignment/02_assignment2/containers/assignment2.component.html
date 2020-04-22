@@ -7,6 +7,20 @@
     <li class="list-group-item">Apply the "active" class to the row when user clicks on it</li>
   </ul>
   <div class="container your-code">
-    <h6>Remove this &lt;h3&gt; and create your HTML here</h6>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Completed</th>
+
+      </tr>
+      <tr *ngFor = 'let todo of todos;let i = index;' >
+        <td>{{todo['id']}}</td>
+        <td>{{todo['type']}}</td>
+        <td>{{todo['description']}}</td>
+        <td>{{todo['completed']}}</td>
+      </tr>
+    </table>
   </div>
 </div>
